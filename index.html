@@ -89,7 +89,7 @@
 
 		<script type="text/javascript">
 			if('serviceWorker' in navigator) {
-				navigator.serviceWorker.register('./assets/sw.js', { scope: '/' }).then((registration) => console.log('Service Worker Registered'));
+				navigator.serviceWorker.register('./assets/js/sw.js', { scope: '/' }).then((registration) => console.log('Service Worker Registered'));
 				navigator.serviceWorker.ready.then((registration) => console.log('Service Worker Ready'));
 			}
 					</script>
