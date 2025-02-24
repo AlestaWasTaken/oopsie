@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Ordo Aeternum</title>
+		
+		<link rel="canonical" href="https://tapitra.com/">	
+		<meta property="og:title" content="Ordo Aeternum">
+		<link rel="stylesheet" href="./assets/css/main.css">		
+	<body>
+		<header class="site-header">
+			<div class="logo-container">
+				<a href="./index.html" class="logo-link">
+					<img src="./image/brand-black.png" style="scale: 200%;" alt="Brand Logo" class="logo-img" />
+				</a>
+			</div>
+			
+			<nav class="navigation">
+				<ul class="nav-list">
+					<li><a href="./hakkimizda.html" class="nav-item">Hakkımızda</a></li>
+					<li><a href="./konumumuz.html" class="nav-item">Konumumuz</a></li>
+					<li><a href="./misyonvevizyon.html" class="nav-item">Misyonumuz & Vizyonumuz</a></li>
+				</ul>
+				
+				<div class="auth-section">
+					 
+				</div>
+			</nav>
+			
+			<button class="nav-toggle" aria-label="Open Navigation" data-action="open"></button>
+		</header>
+		<main id="app-wrapper">
+			<div class="segment" style="text-align: center; padding: 50px 0; border-radius: 10px;">
+				<h2 style="font-size: 36px; color: #ffffff;">Sitenin yenilenmesine...</h2>
+	
+				<div class="countdown" style="display: flex; justify-content: center; gap: 20px; font-size: 24px; color: #fff;">
+					<div style="text-align: center;">
+						<span id="days"></span>
+						<div class="label" style="font-size: 14px;">Gün</div>
+					</div>
+					<div style="text-align: center;">
+						<span id="hours"></span>
+						<div class="label" style="font-size: 14px;">Saat</div>
+					</div>
+					<div style="text-align: center;">
+						<span id="minutes"></span>
+						<div class="label" style="font-size: 14px;">Dakika</div>
+					</div>
+					<div style="text-align: center;">
+						<span id="seconds"></span>
+						<div class="label" style="font-size: 14px;">Saniye</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	
+		<footer>
+			<!-- Footer içeriği -->
+		</footer>
+	
+		<script>
+			// Geri sayım için hedef tarih (10 gün sonrası)
+			let targetDate = localStorage.getItem("targetDate");
+	
+			// Eğer hedef tarih yoksa, yeni tarih ayarlanır
+			if (!targetDate) {
+				targetDate = new Date();
+				targetDate.setDate(targetDate.getDate() + 10); // 10 gün sonrası
+				localStorage.setItem("targetDate", targetDate);
+			} else {
+				// Hedef tarihi bir Date objesi olarak alıyoruz
+				targetDate = new Date(targetDate);
+			}
+	
+			// Geri sayımı güncelleyen fonksiyon
+			function updateCountdown() {
+				const now = new Date();
+				const timeRemaining = targetDate - now;
+	
+				if (timeRemaining <= 0) {
+					clearInterval(countdownInterval);
+					document.querySelector("h2").textContent = "Geri Sayım Bitti!";
+					return;
+				}
+	
+				const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+				const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+				const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+	
+				// Ekranda güncellemeleri yapıyoruz
+				document.getElementById("days").textContent = days;
+				document.getElementById("hours").textContent = hours;
+				document.getElementById("minutes").textContent = minutes;
+				document.getElementById("seconds").textContent = seconds;
+			}
+	
+			// İlk güncellemeyi başlat
+			updateCountdown();
+	
+			// Her saniyede bir geri sayımı güncelle
+			const countdownInterval = setInterval(updateCountdown, 1000);
+		</script>
+
+		</main>
+		
+		
+	</body>
+	</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Ordo Aeternum</title>
+		<link rel="stylesheet" href="./assets/css/main.css">		
+		<script src="./assets/js/main.js"></script>		
+			
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="logo-container">
+				<a href="./index.html" class="logo-link">
+					<img src="./image/brand-black.png" style="scale: 200%;" alt="Brand Logo" class="logo-img" />
+				</a>
+			</div>
+			
+			<nav class="navigation">
+				<ul class="nav-list">
+					<li><a href="./hakkimizda.html" class="nav-item">Hakkımızda</a></li>
+					<li><a href="./konumumuz.html" class="nav-item">Konumumuz</a></li>
+					<li><a href="./misyonvevizyon.html" class="nav-item">Misyonumuz & Vizyonumuz</a></li>
+				</ul>
+				
+				<div class="auth-section">
+					 
+				</div>
+			</nav>
+			
+			<button class="nav-toggle" aria-label="Open Navigation" data-action="open"></button>
+		</header>
+		<main id="app-wrapper">
+			<h1 class="owners">Kurucular ve Üyelerimiz</h1>
+			<div class="segment" style="text-align: center">
+				
+				
+				<div class="team-member">
+					<img src="./image/alesta.png" alt="Alesta Voss" class="team-member-photo">
+					<div class="team-member-info">
+						<p><strong>Alesta Voss – Kurucu</strong></p>
+						<p>
+							Alesta, yıllarını eski metinleri ve kadim sırları araştırmaya adamış bir akademisyendir. Tarihin gölgelerinde saklı kalmış gerçekleri açığa çıkarmak için birçok farklı kültürün kadim öğretilerini inceledi. Onun rehberliğinde, bizler de bu yolculuğa çıktık.
+						</p>
+					</div>
+				</div>
+			
+				<div class="team-member">
+					<img src="./image/kuvartz.png" alt="Eleanore Quartz" class="team-member-photo">
+					<div class="team-member-info">
+						<p><strong>Eleanore Quartz – Stratejist & Araştırmacı</strong></p>
+						<p>
+							Zihin oyunlarında ustalaşmış bir taktikçi. Felsefe ve psikoloji üzerine derin çalışmalarıyla bilinen Eleanore, grubun akıl hocasıdır. Onun gözleri, satranç tahtasında her hamleyi önceden gören bir ustanın bakışıdır.
+						</p>
+					</div>
+				</div>
+			
+				<div class="team-member">
+					<img src="./image/walker.png" alt="Ronan Walker" class="team-member-photo">
+					<div class="team-member-info">
+						<p><strong>Ronan Walker – Sahada Uzman</strong></p>
+						<p>
+							Bir zamanlar sıradan bir gezgin olan Ronan, dünyayı dolaşıp kadim yerleri ziyaret etti. Tapınaklar, unutulmuş mezarlar ve haritalarda bulunmayan bölgeler onun ilgi alanıdır. Bilinmeyene olan tutkusu, onu topluluğumuzun önemli bir parçası haline getirdi.
+						</p>
+					</div>
+				</div>
+
+				<div class="team-member">
+					<img src="https://t3.ftcdn.net/jpg/03/53/11/00/360_F_353110097_nbpmfn9iHlxef4EDIhXB1tdTD0lcWhG9.jpg" alt="Ronan Walker" class="team-member-photo">
+					<div class="team-member-info">
+						<p><strong>Malcolm  Hedhehog – İletişim ve Bağlantılar</strong></p>
+						<p>
+							İnsanları okuma ve doğru bağları kurma konusunda doğal bir yeteneğe sahip olan Malcolm, topluluğumuzun sesi ve gözü konumundadır. Bilgi akışını yönetir, eski dostlukları canlandırır ve yenilerini inşa eder.
+						</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		
+		<footer>
+			<div class="footer-holder">
+				<div class="logo">
+					<div class="ring">
+						<img src="./image/logo2.png">
+					</div>
+					
+				</div>
+				<div class="about-us">
+					<h1>Hakkımızda</h1>
+					<p>Biz, bilinmeyeni arayan, kaybolanı bulan ve gölgelerde saklı gerçekleri keşfeden bir topluluğuz. Bilinenin ötesinde yollarda yürürken, karanlığa adım atmaya cesaret edenlere rehberlik etmek için bilgi ve kadim bilgeliği peşinden sürüyoruz.</p>
+				</div>
+				<ul class="links-wrapper">
+					<li class="links">
+						<h5 class="header">Hakkımızda</h5>
+						<ul class="links-items">
+														<!-- //TODO: Create routes. -->
+							<li><a href="./hakkimizda.html">Biz Kimiz?</a></li>
+							<li><a href="#">Misyonumuz & Vizyonumuz</a></li>
+							
+						</ul>
+					</li>
+ <!-- bu bir kurgu -->
+									</ul>
+				<div class="misc">
+					  
+					
+					</div>
+					<div class="decor decor-left">
+						<img src="https://tapitra.com/image/clouds-left.svg">
+					</div>
+					<div class="decor decor-right">
+						<img src="https://tapitra.com/image/clouds-right.svg">
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<p class="copyright">©   2030 Ordo Aeternum</p>
+				<div class="theme-changer" data-step="0">
+					<div>
+						<button tabindex="-1"><i class="fa-solid fa-desktop"></i></button>
+						<button tabindex="-1"><i class="fa-solid fa-moon"></i></button>
+						<button tabindex="-1"><i class="fa-solid fa-sun"></i></button>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript">
+			if('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('/sw.js', { scope: '/' }).then((registration) => console.log('Service Worker Registered'));
+				navigator.serviceWorker.ready.then((registration) => console.log('Service Worker Ready'));
+			}
+					</script>
+		<script>
+			Sentry.onLoad(() => {
+				Sentry.init({
+					integrations: [
+						Sentry.replayIntegration(),
+					],
+					environment: window.ENVIRONMENT,
+					release: window.RELEASE,
+					replaysSessionSampleRate: 0.1,
+					replaysOnErrorSampleRate: 1.0,
+				});
+			});
+		</script>
+	</body>
+	</html>

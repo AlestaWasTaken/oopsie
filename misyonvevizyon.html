@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Ordo Aeternum</title>
+		
+		
+		
+		
+		<link rel="stylesheet" href="./assets/css/main.css">		<
+	<body>
+		<header class="site-header">
+			<div class="logo-container">
+				<a href="./index.html" class="logo-link">
+					<img src="./image/brand-black.png" style="scale: 200%;" alt="Brand Logo" class="logo-img" />
+				</a>
+			</div>
+			
+			<nav class="navigation">
+				<ul class="nav-list">
+					<li><a href="./hakkimizda.html" class="nav-item">Hakkımızda</a></li>
+					<li><a href="./konumumuz.html" class="nav-item">Konumumuz</a></li>
+					<li><a href="./misyonvevizyon.html" class="nav-item">Misyonumuz & Vizyonumuz</a></li>
+				</ul>
+				
+				<div class="auth-section">
+					 
+				</div>
+			</nav>
+			
+			<button class="nav-toggle" aria-label="Open Navigation" data-action="open"></button>
+		</header>
+		<main id="app-wrapper">
+			<div class="segment" style="text-align: center; padding: 50px 0;  border-radius: 10px;">
+				<div style="margin-top: -100px;">
+					<!-- Resme tıklanabilir bağlantı ekledik -->
+					<a href="#vision-text" id="scrollToText">
+						<img src="./image/crypted.png" alt="Vizyon ve Misyon Görseli" style="display:block; margin: 0 auto; scale: 50%; border-radius: 16px; cursor: pointer;">
+					</a>
+				</div>
+
+
+				<div class="br"></div>
+				
+				<div class="text" style="transition: transform 1s ease-in-out;">
+					<h2 id="vision-text" style="font-size: 36px; color: #ffffff; font-family: 'Georgia', serif; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); transition: transform 1s ease-in-out;">Vizyonumuz</h2>
+					<p style="font-size: 18px; color: #ffffff; font-family: 'Arial', sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; transition: transform 1s ease-in-out;">
+						Bilgi, sonsuz evrende bir ışık gibi yayılır ve her zaman arayış içinde olanların hakkıdır. Geçmişin gölgelerinde kaybolmuş olanları,
+						yeniden keşfetmek ve anlamı yeniden inşa etmek için buradayız. Bilgiyle dolu bir yolculuğa çıkarken, gerçeği arayanlara rehberlik
+						ederken, ışığın karanlıkları delmesine öncülük edeceğiz. Geçmişin derinliklerinden günümüze ulaşan her bir bilgi, insanlık için
+						yeni bir kapıyı aralar.
+					</p>
+				
+					<h2 id="mission-text" style="font-size: 36px; color: #ffffff; font-family: 'Georgia', serif; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); margin-top: 40px; transition: transform 1s ease-in-out;">Misyonumuz</h2>
+					<p style="font-size: 18px; color: #ffffff; font-family: 'Arial', sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; transition: transform 1s ease-in-out;">
+						Gizlenmiş olanı açığa çıkarmak, doğru bilgiyi doğru zamanda doğru kişilerle paylaşmak ve ışığın peşinde yürüyenlere yol göstermek.
+						Bilinmeyenin derinliklerinde, keşfetmeye cesaret edenlerin yanında durarak, disiplin, cesaret ve bilgelik ışığında ilerlemek. Her
+						yeni adım, karanlıkta bir iz bırakırken, her iz bir ışık noktasına dönüşecek ve sonunda gerçeğin aydınlığında bir araya gelecek.
+					</p>
+				</div>
+				
+				<script>
+					// Sayfa yüklenince resme tıklanarak kaydırma animasyonunu başlatmak
+					document.getElementById('scrollToText').addEventListener('click', function(event) {
+						event.preventDefault();
+						const target = document.getElementById('vision-text');
+						
+						// Sayfayı yumuşakça kaydır
+						window.scrollTo({
+							top: target.offsetTop - 1, // Burada -50px kaydırmayı ayarladık
+							behavior: 'smooth'
+						});
+				
+						// Metnin kayma animasyonunu başlatıyoruz
+						document.querySelector('.text').style.transform = 'translateY(1px)'; // Kayma miktarını burada ayarladık
+						setTimeout(function() {
+							document.querySelector('.text').style.transform = 'translateY(0)';
+						}, 300); // Kaymanın hemen ardından eski pozisyona dönmesi için
+					});
+				</script>
+				
+				
+				<!-- Alan fotoğraf eklemek için kullanılabilir -->
+				
+			</div>
+			
+				
+
+		</main>
+		
+		<footer>
+			<div class="footer-holder">
+				<div class="logo">
+					<div class="ring">
+						<img src="./image/logo2.png">
+					</div>
+					
+				</div>
+				<div class="about-us">
+					<h1>Hakkımızda</h1>
+					<p>Biz, bilinmeyeni arayan, kaybolanı bulan ve gölgelerde saklı gerçekleri keşfeden bir topluluğuz. Bilinenin ötesinde yollarda yürürken, karanlığa adım atmaya cesaret edenlere rehberlik etmek için bilgi ve kadim bilgeliği peşinden sürüyoruz.</p>
+				</div>
+				<ul class="links-wrapper">
+					<li class="links">
+						<h5 class="header">Hakkımızda</h5>
+						<ul class="links-items">
+														<!-- //TODO: Create routes. -->
+							<li><a href="./hakkimizda.html">Biz Kimiz?</a></li>
+							<li><a href="#">Misyonumuz & Vizyonumuz</a></li>
+							
+						</ul>
+					</li>
+ <!-- bu bir kurgu -->
+									</ul>
+				<div class="misc">
+					  
+					
+					</div>
+					<div class="decor decor-left">
+						<img src="https://tapitra.com/image/clouds-left.svg">
+					</div>
+					<div class="decor decor-right">
+						<img src="https://tapitra.com/image/clouds-right.svg">
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright">
+				<p class="copyright">©   2030 Ordo Aeternum</p>
+				<div class="theme-changer" data-step="0">
+					<div>
+						<button tabindex="-1"><i class="fa-solid fa-desktop"></i></button>
+						<button tabindex="-1"><i class="fa-solid fa-moon"></i></button>
+						<button tabindex="-1"><i class="fa-solid fa-sun"></i></button>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript">
+			if('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('/sw.js', { scope: '/' }).then((registration) => console.log('Service Worker Registered'));
+				navigator.serviceWorker.ready.then((registration) => console.log('Service Worker Ready'));
+			}
+					</script>
+		<script>
+			Sentry.onLoad(() => {
+				Sentry.init({
+					integrations: [
+						Sentry.replayIntegration(),
+					],
+					environment: window.ENVIRONMENT,
+					release: window.RELEASE,
+					replaysSessionSampleRate: 0.1,
+					replaysOnErrorSampleRate: 1.0,
+				});
+			});
+		</script>
+	</body>
+	</html>
