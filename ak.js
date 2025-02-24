@@ -1,4 +1,4 @@
-console.log("\n\n\n" + atob("31313131") + "\n\n\n");
+console.log("\n\n\n" + atob("QnUgc2l0ZS9veXVuZGEgeWVyIGFsYW4gdMO8bSBrYXJha3Rlcmxlciwgb2xheWxhciB2ZSBtZWvDom5sYXIgdGFtYW1lbiBoYXlhbCDDvHLDvG7DvGTDvHIuIEdlcsOnZWsga2nFn2ksIGt1cnVtIHZleWEgb2xheWxhcmxhIGhlcmhhbmdpIGJpciBiZW56ZXJsaWsgdGFtYW1lbiB0ZXNhZMO8ZnTDvHIu") + "\n\n\n");
 const socket = io.connect(window.location.origin, {query:``});
 // Axy* says hello.
 
