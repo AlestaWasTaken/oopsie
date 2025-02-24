@@ -81,7 +81,12 @@
 				</div>
 			</div>
 		</footer>
-		
+		<script type="text/javascript">
+			if('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('/sw.js', { scope: '/' }).then((registration) => console.log('Service Worker Registered'));
+				navigator.serviceWorker.ready.then((registration) => console.log('Service Worker Ready'));
+			}
+					</script>
 		<script>
 			Sentry.onLoad(() => {
 				Sentry.init({
