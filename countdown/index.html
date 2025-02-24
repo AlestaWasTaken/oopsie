@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Ordo Aeternum</title>
-
+		<script src="../ak.js"></script>
 		<meta property="og:title" content="Ordo Aeternum">
 		<link rel="stylesheet" href="./assets/css/main.css">		
 	<body>
@@ -29,56 +29,15 @@
 			<button class="nav-toggle" aria-label="Open Navigation" data-action="open"></button>
 		</header>
 		<main id="app-wrapper">
-			<div style="left:0; width:100%; height:0; position:relative; padding-bottom:25%; margin:0 auto"><iframe src="https://www.tickcounter.com/widget/countdown/6731765" style="top:0; left:0; width:100%; height:100%; position:absolute; border:0; overflow:hidden" title="My countdown"></iframe></div>
+			<script src="https://cdn.logwork.com/widget/countdown.js"></script>
+<a href="https://logwork.com/countdown-timer" class="countdown-timer" data-style="columns" data-width="613" data-timezone="Asia/Istanbul" data-language="tr" data-date="2025-02-26 10:20">Countdown Timer</a>
 		</main>
 	
 		<footer>
 			<!-- Footer içeriği -->
 		</footer>
 	
-		<script>
-			// Geri sayım için hedef tarih (10 gün sonrası)
-			let targetDate = localStorage.getItem("targetDate");
-	
-			// Eğer hedef tarih yoksa, yeni tarih ayarlanır
-			if (!targetDate) {
-				targetDate = new Date();
-				targetDate.setDate(targetDate.getDate() + 10); // 10 gün sonrası
-				localStorage.setItem("targetDate", targetDate);
-			} else {
-				// Hedef tarihi bir Date objesi olarak alıyoruz
-				targetDate = new Date(targetDate);
-			}
-	
-			// Geri sayımı güncelleyen fonksiyon
-			function updateCountdown() {
-				const now = new Date();
-				const timeRemaining = targetDate - now;
-	
-				if (timeRemaining <= 0) {
-					clearInterval(countdownInterval);
-					document.querySelector("h2").textContent = "Geri Sayım Bitti!";
-					return;
-				}
-	
-				const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-				const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-				const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-				const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-	
-				// Ekranda güncellemeleri yapıyoruz
-				document.getElementById("days").textContent = days;
-				document.getElementById("hours").textContent = hours;
-				document.getElementById("minutes").textContent = minutes;
-				document.getElementById("seconds").textContent = seconds;
-			}
-	
-			// İlk güncellemeyi başlat
-			updateCountdown();
-	
-			// Her saniyede bir geri sayımı güncelle
-			const countdownInterval = setInterval(updateCountdown, 1000);
-		</script>
+		
 
 		</main>
 		
